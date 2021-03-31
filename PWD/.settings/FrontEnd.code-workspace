@@ -1,15 +1,7 @@
 {
 	"folders": [
 		{
-			"name": "VS Code FrontEnd",
-			"path": ".."
-		},
-		{
-			"name": "tmp",
-			"path": "..\\..\\tmp"
-		},
-		{
-			"path": "..\\..\\Sass"
+			"path": "..\\.."
 		}
 	],
 	"settings": {
