@@ -1,0 +1,27 @@
+$perimeter:change; //! CHANGE
+@mixin circle-template($color, $img-map-key) {
+// Circle creating mixin using a color and the image url.
+    position: relative;
+    width: $perimeter;
+    height: $perimeter;
+    border-radius: 100vw;
+    background-color: $color;
+    &::before {
+        opacity: 0;
+        content: "";
+        z-index: 1;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        background-image: url(map-get($img-links, $img-map-key));
+        background-size: cover;
+        position: absolute;
+        transition: opacity 1.2s ease-out;
+    }
+    &:hover::before {
+        opacity: 0.78;
+    }
+}
+// *image links dict must be named $img-links*
+// $img-map-key is the key of the hovered image in the $img-links map.
+// $color is the color of the non-hovered circle.

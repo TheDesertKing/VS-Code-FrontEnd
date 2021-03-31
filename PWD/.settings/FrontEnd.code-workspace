@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "VS Code FrontEnd",
+			"path": ".."
+		},
+		{
+			"name": "tmp",
+			"path": "..\\..\\tmp"
+		},
+		{
+			"path": "..\\..\\Sass"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sassLib"
+	}
+}

@@ -1,0 +1,33 @@
+//! ONLY USE WITH CIRCLE-TEMPLATE !\\
+$s-ratio: 0.8; // ratio for smaller-font-size.
+$font-fam: 'Segoe UI';
+@function text-top($ratio:1) {
+    @return $perimeter/($ratio*10);
+}
+@function text-size($ratio:1) {
+    @return $perimeter/($ratio*4);
+}
+.blue-text {
+    font-size: text-size();
+    top: text-top();
+    color: #08126e;
+    position: relative;
+    text-align: center;
+    font-family: $font-fam;
+    z-index: 2;
+    opacity: 1;
+    @media (max-width: 700px) {
+        top: text-top() * 1.2;
+        font-size: text-size() * 0.9;
+        font-weight: 700;
+    }
+}
+
+.smaller-font-size {
+    top: text-top($s-top);
+    font-size: text-size($s-size);
+    @media (max-width:700px) {
+        top:text-top($s-top) * 1.38;
+        font-size: text-size($s-size) * 0.9;
+    }
+}

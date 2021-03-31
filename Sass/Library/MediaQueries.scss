@@ -1,0 +1,28 @@
+// media query creator based on '$viewport-width' list and sizes list, starting from the second element (first is for the default size)
+$viewport-width: (1200px, 992px, 768px, 600px);
+// large desktop, smaller desktop, table, phone
+$size-list-default: 20em,
+10em,
+5em,
+2.5em,
+1em;
+@mixin media-query($size-list) {
+    $count: 2;
+    @each $key-width in $viewport-width {
+        @media (max-width: $key-width) {
+            height: nth($list: $size-list, $n: $count);
+            width: nth($list: $size-list, $n: $count);
+        }
+        $count: ($count+1);
+    }
+}
+
+// inplementation
+.circle {
+    @include media-query($size-list-default);
+    background-color: blue;
+    height: nth($list: $size-list-default, $n: 1);
+    width: nth($list: $size-list-default, $n: 1);
+    display: block;
+    color: red;
+}

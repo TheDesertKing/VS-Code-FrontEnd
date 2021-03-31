@@ -1,0 +1,21 @@
+@mixin infinite-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    div {
+        flex: 0 0 auto;
+    }
+}
+
+// implementation
+.bab {
+    @include infinite-scroll();
+}
+
+.card {
+    background-color: navy;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    margin: 5px;
+}
